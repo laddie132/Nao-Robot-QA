@@ -22,7 +22,7 @@ def add_args():
                                      description='NaoQi Robot with Question Answering\n'
                                                  'Contact: liuhan132@foxmail.com')
     parser.add_argument('-P', '--port', help='port', default=9559, required=False)
-    parser.add_argument('-A', '--ip', help='ip', default='0.0.0.0', required=False)
+    parser.add_argument('-A', '--ip', help='ip', default='10.112.174.62', required=False)
 
     args = parser.parse_args()
     return args

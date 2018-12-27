@@ -11,7 +11,7 @@ from aip import AipSpeech
 
 
 class MRCService:
-    url = 'http://10.108.211.36:9999/api/mrc'
+    url = 'http://10.108.211.36:9998/api/mrc'
 
     @staticmethod
     def predict(context, question):
@@ -19,7 +19,7 @@ class MRCService:
         r = requests.post(MRCService.url, data)
 
         r_json = json.loads(r.text)
-        answer = r_json['answer']
+        answer = r_json['answer'].encode('utf-8')
 
         return answer
 

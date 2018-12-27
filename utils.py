@@ -9,7 +9,7 @@ import paramiko
 import logging.config
 
 
-def init_logging(config_path='config/logging_config.yaml'):
+def init_logging(config_path='logging_config.yaml'):
     """
     initial logging module with config
     :param config_path:

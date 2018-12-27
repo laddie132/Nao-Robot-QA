@@ -4,6 +4,10 @@
 __author__ = "Han"
 __email__ = "liuhan132@foxmail.com"
 
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 import unittest
 from remote_service import MRCService, ASRService
 
@@ -24,7 +28,7 @@ class TestRemoteService(unittest.TestCase):
 
     def test_asr(self):
         asr_service = ASRService()
-        text = asr_service.recognize('test_record.wav')
+        text = asr_service.recognize('/tmp/tmp_record.wav')
         print(text)
 
 
