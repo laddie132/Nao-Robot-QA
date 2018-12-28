@@ -10,7 +10,6 @@ sys.setdefaultencoding('utf8')
 
 import time
 import logging
-import paramiko
 from utils import sftp_get
 from remote_service import MRCService, ASRService
 
@@ -127,9 +126,12 @@ class QAModule(ALModule):
                                 "onSoundDetected")
 
 
+# ----------------------------------------------------------------------------------------------
+# start running
+
+
 import argparse
 from utils import init_logging
-
 
 context = '赵鹏（），中国足球运动员，司职后卫。赵鹏于1997年便加入河南建业青年队，2002年进入河南建业一线队。2011赛季结束后，' \
           '赵鹏和建业的合同完结，此后一直盛传他将加盟中超升班马广州富力。但最后在2012年1月12日，建业成功与赵鹏续约3年。2012赛季，' \

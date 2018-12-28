@@ -4,9 +4,11 @@
 __author__ = "Han"
 __email__ = "liuhan132@foxmail.com"
 
+"""Not used beacuse of the global variable issue"""
+
 import argparse
 from utils import init_logging
-from robot import NaoRobot
+from run_robot import NaoRobot
 
 
 context = '赵鹏（），中国足球运动员，司职后卫。赵鹏于1997年便加入河南建业青年队，2002年进入河南建业一线队。2011赛季结束后，' \
