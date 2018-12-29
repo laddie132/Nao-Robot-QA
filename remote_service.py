@@ -18,7 +18,9 @@ class MRCService:
         data = {'context': context, 'question': question}
         r = requests.post(MRCService.url, data)
 
-        r_json = json.loads(r.text)
+        if '<html>' in r.text:
+            return ''
+        r_json = json.loads(r.text, encoding='utf-8')
         answer = r_json['answer'].encode('utf-8')
 
         return answer

@@ -84,7 +84,6 @@ class QAModule(ALModule):
                                 "QuestionAnswer",
                                 "onSoundDetected")
 
-    # todo: change the 8000 to 16000
     def onSoundDetected(self):
         memory.unsubscribeToEvent("SoundDetected",
                                   "QuestionAnswer")
@@ -133,12 +132,13 @@ class QAModule(ALModule):
 import argparse
 from utils import init_logging
 
-context = '赵鹏（），中国足球运动员，司职后卫。赵鹏于1997年便加入河南建业青年队，2002年进入河南建业一线队。2011赛季结束后，' \
-          '赵鹏和建业的合同完结，此后一直盛传他将加盟中超升班马广州富力。但最后在2012年1月12日，建业成功与赵鹏续约3年。2012赛季，' \
-          '赵鹏未能帮助建业保级。其后在2013年1月1日，赵鹏连同其队友曾诚双双加盟广州恒大。 但球队中后卫位置的激烈竞争，再加上3月份他' \
-          '在国家队比赛后的恢复训练受伤，直到5月10日，他才在广州恒大客场3比0击败上海申花的比赛下半场替补荣昊登场，首次为广州队在正式比' \
-          '赛出场。2014年6月，赵鹏被租借到中超球队长春亚泰。 不过由于伤病困扰，他在2014下半赛季并没有得到出场机会。2016年3月，中乙球' \
-          '队成都钱宝宣布赵鹏加盟。2009年赵鹏入选中国国家队，同年5月29日友谊赛对阵德国是他的第一场国际A级赛。'
+context = '于乐（），中国足球运动员，司职前锋。于乐出身于北京国安，在2006年以2万元转会到河南建业。2007年赛季，河南建业对阵大连实德，' \
+          '于乐下半场打进制胜一球，帮助球队获得队史首场中超胜利而一战成名。不过随后由于上阵机会不多成为球队的边缘球员。2010年河南建业' \
+          '要在中超和亚冠双线作战，在伤兵满营的情况下于乐才获得出场机会，当年4月13日进行的亚足联冠军联赛客场对阵新加坡武装部队的比赛中，' \
+          '于乐为河南建业一度扳平比分，收获个人首个亚冠进球，可惜球队最终以1-2失利。该赛季，于乐在中超出场15次打进3球。2011年于乐在中超' \
+          '联赛只出场7次，其中首发1次，全部出场时间加起来只有184分钟。2012年2月，于乐以自由转会方式加盟深圳红钻与球队签约3年，合同到期后' \
+          '深圳红钻有续约1年的优先权。由于遭遇伤病影响，未有过多发挥。2013年，于乐摆脱伤病困扰恢复状态，成为深圳队锋线上颇具冲击力的福将，' \
+          '赛季中期状态火爆屡屡打入关键入球。'
 
 
 def add_args():
@@ -146,7 +146,7 @@ def add_args():
                                      description='NaoQi Robot with Question Answering\n'
                                                  'Contact: liuhan132@foxmail.com')
     parser.add_argument('-P', '--port', help='port', default=9559, required=False)
-    parser.add_argument('-A', '--ip', help='ip', default='10.112.174.62', required=False)
+    parser.add_argument('-A', '--ip', help='ip', default='10.112.156.141', required=False)
 
     args = parser.parse_args()
     return args
